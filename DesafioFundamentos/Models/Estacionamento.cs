@@ -1,10 +1,14 @@
+using System;
+
 namespace DesafioFundamentos.Models
+
 {
     public class Estacionamento
     {
         private decimal PrecoInicial = 0;
         private decimal PrecoPorHora = 0;
-        private List<string> Veiculos = new List<string>();
+        public  List<string> Veiculos = new List<string>();
+        
 
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
@@ -34,10 +38,10 @@ namespace DesafioFundamentos.Models
                 decimal horaspermanecidas = decimal.Parse(Console.ReadLine());
                 decimal preco = horaspermanecidas + PrecoPorHora;
                 decimal valorTotal = preco + PrecoInicial;
-                
+
                 Veiculos.Remove(placa);
 
-                
+
 
                 Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal}");
             }
@@ -49,7 +53,7 @@ namespace DesafioFundamentos.Models
 
         public void ListarVeiculos()
         {
-            
+
             if (Veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
@@ -63,7 +67,7 @@ namespace DesafioFundamentos.Models
             {
                 Console.WriteLine("Não há veículos estacionados.");
             }
-            }
         }
-    } 
+    }
+}
 

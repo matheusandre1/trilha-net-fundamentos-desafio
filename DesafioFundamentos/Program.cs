@@ -7,7 +7,7 @@ decimal precoInicial = 0;
 decimal precoPorHora = 0;
 
 Console.WriteLine("Seja bem vindo ao sistema de estacionamento!");
-    Console.Write("Digite o preço inicial: ");
+Console.Write("Digite o preço inicial: ");
                   
 precoInicial = Convert.ToDecimal(Console.ReadLine());
 
